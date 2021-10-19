@@ -1,0 +1,13 @@
+image:
+  file: .gitpod.dockerfile
+tasks:
+  - init: |
+      cabal update
+      cabal install implicit-hie 
+      stack build
+      stack setup
+    command: |
+      stack test
+vscode:
+  extensions:
+    - haskell.haskell
